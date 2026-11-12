@@ -1,0 +1,859 @@
+@import "variables";
+@import "header";
+@import "footer";
+
+
+body {
+    background: #ffffff;
+    overflow-x: hidden;
+    font-family: $Outfit;
+    padding-top: 104px;
+
+    @media (max-width:1199px) {
+        padding-top: 84px;
+    }
+
+    @media (max-width:767px) {
+        padding-top: 74px;
+    }
+
+    &.no_scroll {
+        overflow: hidden;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $Outfit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic
+}
+
+
+
+@font-face {
+    font-family: 'Bebas Neue Pro';
+    src: url('../fonts/BebasNeuePro-Bold.woff2') format('woff2'),
+        url('../fonts/BebasNeuePro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+.customscroll::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+.customscroll::-webkit-scrollbar-thumb {
+    background-color: $primary;
+}
+
+.transition {
+    transition: all ease-in-out 0.4s;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+button,
+button:focus {
+    outline: none;
+}
+
+.input {
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    line-height: 24px;
+    font-size: 12px;
+    line-height: 33px;
+    color: $szeero;
+    font-family: $Poppins;
+    border: 1px solid rgba(112, 112, 112, 0.2);
+    border-radius: 5px;
+}
+
+.textarea {
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    line-height: 24px;
+    font-size: 12px;
+    line-height: 33px;
+    color: $szeero;
+    font-family: $Poppins;
+    border: 1px solid rgba(112, 112, 112, 0.2);
+    border-radius: 5px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+p,
+p:last-child {
+    font-size: 14px;
+    line-height: 25px;
+    color: $white;
+    margin-bottom: 16px;
+}
+
+a,
+a:hover {
+    font-size: inherit;
+    text-decoration: none
+}
+
+span,
+strong,
+i {
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+}
+
+.mlr-auto {
+    margin-left: auto;
+    margin-right: auto
+}
+
+input:focus,
+textarea:focus {
+    outline: none
+}
+
+button {
+    // background: none;
+    border: 0;
+    font-family: $Quicksand;
+}
+
+
+/* gradient animation Start */
+@-webkit-keyframes gradient {
+    0% {
+        background-position: -5000px 0
+    }
+
+    100% {
+        background-position: 5000px 0
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: -5000px 0
+    }
+
+    100% {
+        background-position: 5000px 0
+    }
+}
+
+.brand_btn {
+    -webkit-animation: gradient 53s linear infinite;
+    animation: gradient 53s linear infinite;
+    background: linear-gradient(121.19deg, rgba(133, 239, 49, 0) 25.73%, rgba(255, 255, 255, 0.3) 45.27%,
+            rgba(133, 239, 49, 0) 62.27%);
+}
+
+.brand_btn_ylw {
+    -webkit-animation: gradient 53s linear infinite;
+    animation: gradient 53s linear infinite;
+    background: linear-gradient(121.19deg, rgba(133, 239, 49, 0) 25.73%, rgba(110, 21, 136, 0.3) 45.27%,
+            rgba(133, 239, 49, 0) 62.27%);
+}
+
+.brand_btn_transparent {
+    -webkit-animation: gradient 53s linear infinite;
+    animation: gradient 53s linear infinite;
+    background: linear-gradient(121.19deg, rgba(133, 239, 49, 0) 25.73%, rgba(239, 24, 85, 0.2) 45.27%,
+            rgba(133, 239, 49, 0) 62.27%);
+}
+
+/* gradient animation End */
+
+
+/* zoomIn animation Start */
+@-webkit-keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.zoomInOut {
+    animation: zoomInOut 3s ease-in-out infinite;
+    -webkit-animation: zoomInOut 3s ease-in-out infinite;
+    transition: all ease-in-out 0.4s;
+}
+
+/* zoomIn animation End */
+
+/* moveRightLeft animation Start */
+@-webkit-keyframes moveRightLeft {
+    0% {
+        right: 25px;
+    }
+
+    50% {
+        right: 15px;
+    }
+
+    100% {
+        right: 25px;
+    }
+
+}
+
+@keyframes moveRightLeft {
+    0% {
+        right: 25px;
+    }
+
+    50% {
+        right: 15px;
+    }
+
+    100% {
+        right: 25px;
+    }
+}
+
+.moveRightLeft {
+    animation: moveRightLeft 3s ease-in-out infinite;
+    -webkit-animation: moveRightLeft 3s ease-in-out infinite;
+}
+
+/* moveRightLeft animation End */
+
+
+/* borderanimate Start */
+@-webkit-keyframes textYlwWhite {
+    0% {
+        width: 35px;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes borderanimate {
+    0% {
+        width: 35px;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.animate_border {
+    width: 100px;
+    height: 3px;
+    position: relative;
+    margin: 5px 0 20px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        background: linear-gradient(90deg, rgba(179, 33, 44, 1) 50%, rgba(33, 63, 108, 1) 50%) top/100% 3px no-repeat;
+        width: 30px;
+        height: 3px;
+        animation: 3s linear infinite alternate forwards borderanimate;
+        -webkit-animation: 3s linear infinite alternate forwards borderanimate;
+        bottom: 0;
+        border-radius: 10px;
+    }
+
+    &.center {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    &.whiteblue {
+        &:before {
+            background: linear-gradient(90deg, rgba(255, 255, 255, 1) 50%, rgba(110,143,191, 1) 50%) top/100% 3px no-repeat;
+        }
+    }
+
+    &.bluewhite {
+        &:before {
+            background: linear-gradient(90deg, rgba(110,143,191, 1) 50%, rgba(255, 255, 255, 1) 50%) top/100% 3px no-repeat;
+        }
+    }
+
+    &.blue {
+        &:before {
+            background: linear-gradient(90deg, rgba(110,143,191, 1) 50%, rgba(110,143,191, 1) 50%) top/100% 3px no-repeat;
+        }
+    }
+}
+
+/* borderanimate End */
+
+/* rotate_animation Start */
+@-webkit-keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate_animation {
+    animation: rotate 15s linear infinite;
+    -webkit-animation: rotate 15s linear infinite;
+}
+
+/* rotate_animation End */
+
+
+.relative {
+    position: relative;
+}
+
+.white {
+    color: $white !important;
+}
+
+.black {
+    color: $black !important;
+}
+
+.blue {
+    color: $primary !important;
+}
+
+.bluelight {
+    color: $secondary !important;
+}
+
+.red {
+    color: $red !important;
+}
+
+.text_center {
+    text-align: center;
+}
+
+.text_right {
+    text-align: right !important;
+}
+
+.fw_300 {
+    font-weight: 300 !important;
+}
+
+.fw_400 {
+    font-weight: 400 !important;
+}
+
+.fw_500 {
+    font-weight: 500 !important;
+}
+
+.fw_600 {
+    font-weight: 600 !important;
+}
+
+.fw_700 {
+    font-weight: 700 !important;
+}
+
+.fw_900 {
+    font-weight: 900 !important;
+}
+
+.d-none {
+    display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $Outfit !important;
+    margin: initial;
+}
+
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child {
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-family: $Outfit;
+}
+
+button {
+    font-family: $Outfit !important;
+}
+
+/* animation_white_line Start */
+@-webkit-keyframes gradient {
+    0% {
+        background-position: -5000px 0
+    }
+
+    100% {
+        background-position: 5000px 0
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: -5000px 0
+    }
+
+    100% {
+        background-position: 5000px 0
+    }
+}
+
+.animation_white_line {
+    -webkit-animation: gradient 80s linear infinite;
+    animation: gradient 80s linear infinite;
+    background: linear-gradient(121.19deg, rgba(255, 255, 255, 0) 25.73%, rgba(255, 255, 255, 0.3) 45.27%,
+            rgba(255, 255, 255, 0) 62.27%);
+}
+
+/* animation_white_line End */
+
+/* cta_btn */
+.cta_btn {
+    background-color: $red;
+    min-width: 105px;
+    min-height: 48px;
+    padding: 10px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    font-size: 12px;
+    font-family: $Outfit !important;
+    font-weight: 600;
+    color: $white;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    border-radius: 25px;
+    border: 0;
+    position: relative;
+    border: 1px solid $red;
+
+    @media (max-width:767px) {
+        min-height: 42px;
+        padding: 10px 20px;
+    }
+
+    .rgt_arrow {
+        width: 19px;
+        height: 7px;
+        line-height: 11px;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        margin-top: -6px;
+        transition: all 0.3s ease-in-out;
+
+        svg {
+            width: 100%;
+            height: auto;
+
+            path {
+                fill: $white;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+
+    &.animate_arrow {
+        position: relative;
+        padding: 10px 60px 10px 25px;
+
+        .rgt_arrow {
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            -webkit-animation: moveRightLeft 3s linear infinite;
+            animation: moveRightLeft 3s linear infinite;
+        }
+    }
+
+    &:hover {
+        background-color: $primary;
+        font-size: 12px;
+        color: $white;
+        border-color: $primary;
+
+        svg {
+            path {
+                fill: $white;
+            }
+        }
+    }
+
+    &.border_btn {
+        background-color: transparent;
+        color: $red;
+
+        svg {
+            path {
+                fill: $red;
+            }
+        }
+
+        &:hover {
+            background-color: $red;
+            color: $secondary;
+            border-color: $red;
+
+            svg {
+                path {
+                    fill: $secondary;
+                }
+            }
+        }
+    }
+
+    &.onlytext {
+        background-color: transparent;
+        color: $primary;
+        border: transparent;
+        padding-left: 0;
+
+        svg {
+            path {
+                fill: $primary;
+            }
+        }
+
+        &:hover {
+            color: $red;
+
+            svg {
+                path {
+                    fill: $red;
+                }
+            }
+        }
+    }
+
+    &.bgbluelight {
+        background-color: $secondary;
+        color: $primary;
+        border-color: $secondary;
+
+        svg {
+            path {
+                fill: $primary;
+            }
+        }
+
+        &:hover {
+            background-color: $primary;
+            border-color: $primary;
+            color: $white;
+
+            svg {
+                path {
+                    fill: $white;
+                }
+            }
+        }
+    }
+
+
+}
+
+svg {
+    width: auto;
+    height: auto;
+}
+
+/* social_icon */
+.social_icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    .s_label {
+        font-size: 13px;
+        line-height: 18px;
+        color: $primary;
+        font-family: $Quicksand;
+        font-weight: 600;
+        white-space: nowrap;
+        margin-right: 5px;
+    }
+
+    a {
+        background-color: $primary;
+        width: 34px;
+        min-width: 34px;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+
+        svg {
+            transform: rotate(0deg);
+            transition: all ease-in-out 0.4s;
+        }
+
+        &:hover {
+            background-color: $primary;
+
+            svg {
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
+
+.custom_container {
+    width: 100%;
+    max-width: 1310px;
+    padding: 0 15px;
+    margin: 0 auto;
+
+    &.mw_1250 {
+        max-width: 1250px;
+    }
+}
+
+.page_wrap {
+    width: 100%;
+    min-height: 200px;
+}
+
+/* c_heading */
+.c_heading {
+    width: 100%;
+    font-size: 35px;
+    line-height: 44px;
+    font-family: $Outfit !important;
+    font-weight: 600;
+    color: $primary;
+    display: block;
+    text-align: left;
+    margin-bottom: 15px;
+
+    @media (max-width:991px) {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    @media (max-width:767px) {
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 10px;
+    }
+
+    span {
+        font-family: $Outfit !important;
+    }
+
+    br {
+        @media (max-width:991px) {
+            display: none;
+        }
+    }
+
+    &.center {
+        text-align: center;
+    }
+}
+
+.heading_wrap {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+
+    .c_heading {
+        width: auto;
+        position: relative;
+        padding-right: 35px;
+
+        @media (max-width:991px) {
+            padding-right: 30px;
+        }
+
+        @media (max-width:767px) {
+            padding-right: 28px;
+        }
+
+        &:after {
+            content: '';
+            background: url("../images/common-images/bg_heading.svg")no-repeat center center;
+            background-size: 100%;
+            width: 58px;
+            height: 55px;
+            position: absolute;
+            right: 0px;
+            top: -12px;
+            display: inline-block;
+
+            @media (max-width:991px) {
+                width: 47px;
+                height: 45px;
+            }
+
+            @media (max-width:767px) {
+                width: 40px;
+                height: 38px;
+                top: -9px;
+            }
+        }
+
+        .rgticon {
+            width: 55px;
+            position: relative;
+            left: -25px;
+            top: -5px;
+        }
+    }
+
+    &.center {
+        justify-content: center;
+
+        .c_heading {
+            text-align: center;
+        }
+    }
+
+    &.patch_start {
+        .c_heading {
+            &:after {
+                display: none;
+            }
+
+            &:before {
+                content: '';
+                background: url("../images/common-images/bg_heading.svg")no-repeat center center;
+                background-size: 100%;
+                width: 58px;
+                height: 55px;
+                position: absolute;
+                left: -25px;
+                top: -14px;
+                display: inline-block;
+
+                @media (max-width:991px) {
+                    width: 47px;
+                    height: 45px;
+                    left: -20px;
+                }
+
+                @media (max-width:767px) {
+                    width: 40px;
+                    height: 38px;
+                    top: -9px;
+                    left: -12px;
+                }
+            }
+        }
+    }
+}
+
+/* sub_heading */
+.sub_heading {
+    display: block;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: left;
+    font-family: $Outfit;
+    font-weight: 600;
+    color: $blacklight;
+    margin-bottom: 15px;
+
+    @media (max-width:767px) {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    &.center {
+        text-align: center;
+    }
+}
+/* ---- Pure HTML colour theme overrides: yellow call-to-action buttons ---- */
+.header_right .rgtbtn svg path,.header_right .rgtbtn svg g path{fill:#172338 !important}
+.cta_btn:not(.onlytext):not(.bgbluelight) svg path{fill:#172338 !important}
+.cta_btn:not(.onlytext):not(.bgbluelight){color:#172338}
+.header_right .rgtbtn{color:#172338}
+.cta_btn.bgbluelight{background:#FFC324 !important;background-color:#FFC324 !important;color:#172338 !important}
+.cta_btn.bgbluelight svg path{fill:#172338 !important}
+
+/* ---- hover fixes + floating buttons ---- */
+.header .header_bottom .header_right .rgtbtn:hover{color:#fff !important}
+.header_right .rgtbtn:hover svg path,.header_right .rgtbtn:hover svg g path{fill:#fff !important}
+.cta_btn:not(.onlytext):hover{color:#fff !important}
+.cta_btn:not(.onlytext):hover svg path{fill:#fff !important}
+.cta_btn.bgbluelight:hover{background:#172338 !important;background-color:#172338 !important;border-color:#172338 !important}
+.floating_icons a img{display:block;width:100%;border-radius:50%;box-shadow:0 6px 16px rgba(23,35,56,.35)}
+

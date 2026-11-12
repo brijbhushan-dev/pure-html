@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="445" height="76" viewBox="0 0 445 76" role="img" aria-label="Pure HTML logo">
+  <!-- LOGO PLACEHOLDER: replace this file with your own logo (keep the 445x76 ratio) -->
+  <rect x="2" y="6" width="64" height="64" rx="14" fill="#E0A800"/>
+  <path d="M26 24 L14 38 L26 52" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M42 24 L54 38 L42 52" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="82" y="52" font-family="'Poppins','Segoe UI',Arial,Helvetica,sans-serif" font-size="44" font-weight="700" fill="#FFFFFF">Pure<tspan fill="#FFC324"> HTML</tspan></text>
+</svg>
